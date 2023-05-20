@@ -1,4 +1,5 @@
 import React from 'react';
+import tachyons from 'tachyons';
 
 const Navigation = ({ onRouteChange, isSignedIn }) => {
     if (isSignedIn) {

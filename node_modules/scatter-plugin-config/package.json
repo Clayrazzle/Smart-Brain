@@ -1,0 +1,22 @@
+{
+  "name": "scatter-plugin-config",
+  "description": "Allows the Scatter IoC container to inject configuration parameters",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mario Casciaro"
+  },
+  "main": "lib",
+  "homepage": "https://github.com/mariocasciaro/scatter-plugin-config",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mariocasciaro/scatter-plugin-config.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "peerDependencies": {
+    "scatter": "~0.7.0"
+  },
+  "license": "MIT"
+}
