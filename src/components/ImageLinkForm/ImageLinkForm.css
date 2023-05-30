@@ -1,0 +1,5 @@
+.form {
+  width: 700px;
+  opacity: 1.0;
+  background: repeating-radial-gradient( circle at 0 0, transparent 0, #010106 10px ), repeating-linear-gradient( #51e5fd55, #51e5fd );
+}
