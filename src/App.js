@@ -66,7 +66,11 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
+<<<<<<< HEAD
       fetch('https://smart-brain-api-vuhl.onrender.com/imageurl', {
+=======
+      fetch('http://localhost:3000/imageurl', {
+>>>>>>> ea98d89088bb6ee7ddda79e7a5df5ec68316c69d
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -76,7 +80,11 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
+<<<<<<< HEAD
           fetch('https://smart-brain-api-vuhl.onrender.com/image', {
+=======
+          fetch('http://localhost:3000/image', {
+>>>>>>> ea98d89088bb6ee7ddda79e7a5df5ec68316c69d
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
