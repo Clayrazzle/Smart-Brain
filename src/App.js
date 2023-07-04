@@ -66,7 +66,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://smartbackend-p304.onrender.com', {
+      fetch('https://smartbackend-p304.onrender.com/image', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -76,7 +76,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://smartbackend-p304.onrender.com', {
+          fetch('https://smartbackend-p304.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -127,7 +127,7 @@ class App extends Component {
 
   onRouteChange = (route) => {
     if (route === 'signout') {
-      this.setState({initialState})
+      this.setState({ ...initialState })
     } else if (route === 'home') {
       this.setState({isSignedIn: true})
     }
