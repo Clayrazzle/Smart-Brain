@@ -66,7 +66,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://smartbackend-p304.onrender.com/imageurl', {
+      fetch('https://smartbackend-p304.onrender.com:3000/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -76,7 +76,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://smartbackend-p304.onrender.com/image', {
+          fetch('https://smartbackend-p304.onrender.com:3000/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
