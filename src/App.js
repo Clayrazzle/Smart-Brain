@@ -76,7 +76,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://smartbackend-p304.onrender.come', {
+          fetch('https://smartbackend-p304.onrender.com', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
