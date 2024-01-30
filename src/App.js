@@ -14,7 +14,7 @@ import ParticlesBg from 'particles-bg'
 const initialState = {
   input: '',
   imageUrl: '',
-  boxes: {},
+  boxes: [],
   route: 'signin',
   isSignedIn: false,
   user: {
@@ -61,7 +61,7 @@ class App extends Component {
   }*/
 
   calculateFaceLocation = (data) => {
-    const regions = data.outputs[0].data.regions;
+    const regions = data.outputs[0].data.regions || [];
     const image = document.getElementById('inputimage');
     const width = Number(image.width);
     const height = Number(image.height);
