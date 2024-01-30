@@ -15,6 +15,7 @@ import './FaceRecognition.css';
 export default FaceRecognition;*/
 
 const FaceRecognition = ({ imageUrl, boxes }) => {
+  console.log('Boxes:', boxes);
   return (
     <div className='center ma'>
       <div className='absolute mt2'>
