@@ -14,7 +14,7 @@ import ParticlesBg from 'particles-bg'
 const initialState = {
   input: '',
   imageUrl: '',
-  box: {},
+  boxes: {},
   route: 'signin',
   isSignedIn: false,
   user: {
@@ -118,35 +118,6 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  /*onButtonSubmit = () => {
-    this.setState({imageUrl: this.state.input});
-      fetch('http://localhost:3001/imageurl', {
-        method: 'post',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          input: this.state.input
-        })
-      })
-      .then(response => response.json())
-      .then(response => {
-        if (response) {
-          fetch('http://localhost:3000/image', {
-            method: 'put',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              id: this.state.user.id
-            })
-          })
-            .then(response => response.json())
-            .then(count => {
-              this.setState(Object.assign(this.state.user, { entries: count}))
-            })
-            .catch(console.log);
-        }
-        this.displayFaceBox(this.calculateFaceLocation(response))
-      })
-      .catch(err => console.log(err));
-  }*/
 
   onRouteChange = (route) => {
     if (route === 'signout') {
